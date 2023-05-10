@@ -16,7 +16,7 @@ const DateTimePicker = ({ value, onChange }) => {
   };
 
   return (
-    <div>
+    <div className="date-container">
       <div className="date-select-container">
         <label htmlFor="date">Выберите дату:</label>
         <input type="date" id="date" value={date} onChange={handleDateChange} />

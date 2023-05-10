@@ -1,9 +1,9 @@
 .booking-form-container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .booking-form {
@@ -12,6 +12,7 @@
   border-radius: 8px;
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .btn-container {
@@ -43,4 +44,9 @@ button {
   outline: none;
   cursor: text;
   resize: none;
+}
+
+.ss {
+  display: flex;
+  flex-direction: column;
 }

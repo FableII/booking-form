@@ -4,15 +4,23 @@ import TowerSelect from "../TowerSelect/TowerSelect";
 import FloorSelect from "../FloorSelect/FloorSelect";
 import MeetingRoomSelect from "../MeetingRoomSelect/MeetingRoomSelect";
 import DateTimePicker from "../DateTimePicker/DateTimePicker";
+import {
+  initialTower,
+  initialFloor,
+  initialRoom,
+  initialDate,
+  initialComment,
+} from "../../constants/constants";
 
 import "./BookingForm.css";
+import TextArea from "../TextArea/TextArea";
 
 const BookingForm = () => {
-  const [tower, setTower] = useState("a");
-  const [floor, setFloor] = useState("3");
-  const [room, setRoom] = useState("1");
-  const [date, setDate] = useState(new Date());
-  const [comment, setComment] = useState("");
+  const [tower, setTower] = useState(initialTower);
+  const [floor, setFloor] = useState(initialFloor);
+  const [room, setRoom] = useState(initialRoom);
+  const [date, setDate] = useState(initialDate);
+  const [comment, setComment] = useState(initialComment);
 
   const handleTowerChange = (e) => {
     setTower(e.target.value);
@@ -47,19 +55,19 @@ const BookingForm = () => {
 
     console.log(data);
 
-    setTower("");
-    setFloor("");
-    setRoom("");
-    setDate("");
-    setComment("");
+    setTower(initialTower);
+    setFloor(initialFloor);
+    setRoom(initialRoom);
+    setDate(initialDate);
+    setComment(initialComment);
   };
 
   const handleClear = () => {
-    setTower("");
-    setFloor("");
-    setRoom("");
-    setDate("");
-    setComment("");
+    setTower(initialTower);
+    setFloor(initialFloor);
+    setRoom(initialRoom);
+    setDate(initialDate);
+    setComment(initialComment);
   };
 
   return (
@@ -69,8 +77,8 @@ const BookingForm = () => {
         <FloorSelect value={floor} onChange={handleFloorChange} />
         <MeetingRoomSelect value={room} onChange={handleRoomChange} />
         <DateTimePicker value={date} onChange={handleDateChange} />
-        <label htmlFor="comment">Комментарий:</label>
-        <textarea id="comment" value={comment} onChange={handleCommentChange} />
+        <TextArea value={comment} onChange={handleCommentChange} />
+
         <div className="btn-container">
           <button type="submit">Отправить</button>
           <button type="button" onClick={handleClear}>

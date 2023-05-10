@@ -1,3 +1,9 @@
+.date-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .date-select-container {
   display: flex;
   flex-direction: column;

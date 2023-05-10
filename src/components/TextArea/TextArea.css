@@ -1,0 +1,12 @@
+#comment {
+    width: 295px;
+    height: 80px;
+    outline: none;
+    cursor: text;
+    resize: none;
+  }
+  
+  .text-area-container {
+    display: flex;
+    flex-direction: column;
+  }
