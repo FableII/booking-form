@@ -1,0 +1,13 @@
+.date-select-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#date,
+#time {
+  width: 295px;
+  height: 30px;
+  outline: none;
+  cursor: text;
+}
