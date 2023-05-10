@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import './DateTimePicker.css'
+import { initialDate } from "../../constants/constants";
+import "./DateTimePicker.css";
 
 const DateTimePicker = ({ value, onChange }) => {
-  const [date, setDate] = useState(value?.date || "");
-  const [time, setTime] = useState(value?.time || "");
+  const [date, setDate] = useState(value?.date || initialDate);
+  const [time, setTime] = useState(value?.time || initialDate);
 
   const handleDateChange = (e) => {
     setDate(e.target.value);

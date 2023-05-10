@@ -6,6 +6,24 @@
   align-items: center;
 }
 
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .booking-form {
   padding: 35px;
   background: #ffffff;
@@ -17,9 +35,8 @@
 
 .btn-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   margin-top: 15px;
-  gap: 15px;
 }
 
 button {
@@ -44,9 +61,4 @@ button {
   outline: none;
   cursor: text;
   resize: none;
-}
-
-.ss {
-  display: flex;
-  flex-direction: column;
 }

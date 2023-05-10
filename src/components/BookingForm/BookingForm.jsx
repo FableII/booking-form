@@ -42,6 +42,14 @@ const BookingForm = () => {
     setComment(e.target.value);
   };
 
+  const handleClear = () => {
+    setTower(initialTower);
+    setFloor(initialFloor);
+    setRoom(initialRoom);
+    setDate(initialDate);
+    setComment(initialComment);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -55,30 +63,23 @@ const BookingForm = () => {
 
     console.log(data);
 
-    setTower(initialTower);
-    setFloor(initialFloor);
-    setRoom(initialRoom);
-    setDate(initialDate);
-    setComment(initialComment);
-  };
-
-  const handleClear = () => {
-    setTower(initialTower);
-    setFloor(initialFloor);
-    setRoom(initialRoom);
-    setDate(initialDate);
-    setComment(initialComment);
+    handleClear();
   };
 
   return (
     <div className="booking-form-container">
       <form onSubmit={handleSubmit} className="booking-form">
-        <TowerSelect value={tower} onChange={handleTowerChange} />
-        <FloorSelect value={floor} onChange={handleFloorChange} />
-        <MeetingRoomSelect value={room} onChange={handleRoomChange} />
-        <DateTimePicker value={date} onChange={handleDateChange} />
-        <TextArea value={comment} onChange={handleCommentChange} />
-
+        <div className="main-container">
+        <div className="left-container">
+          <TowerSelect value={tower} onChange={handleTowerChange} />
+          <FloorSelect value={floor} onChange={handleFloorChange} />
+          <MeetingRoomSelect value={room} onChange={handleRoomChange} />
+        </div>
+        <div className="right-container">
+          <DateTimePicker value={date} onChange={handleDateChange} />
+          <TextArea value={comment} onChange={handleCommentChange} />
+        </div>
+        </div>
         <div className="btn-container">
           <button type="submit">Отправить</button>
           <button type="button" onClick={handleClear}>
